@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #000000;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+        canvas {
+            background-color: #000000;
+            max-width: 100%;
+        }
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 8px;
+        }
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+        button{
+            padding: 5px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="FireworkCanvas" width="600" height="600"></canvas>
+    
+    <div class="controls">
+        <label class="control-group">
+            <span>Gravity</span>
+            <input type="range" id="gravity" min="0.05" max="0.5" step="0.01" value="0.1">
+        </label>
+        <label class="control-group">
+            <span>Explosion Size</span>
+            <input type="range" id="particleCount" min="20" max="300" step="10" value="100">
+        </label>
+        <button id="autoShow">Włącz Automatyczny Pokaz</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
